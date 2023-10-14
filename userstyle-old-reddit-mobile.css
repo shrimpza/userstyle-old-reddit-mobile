@@ -1,0 +1,82 @@
+/* ==UserStyle==
+@name           Old Reddit Mobile Hack
+@namespace      USO Archive
+@author         Shrimp
+@description    `<p>A simple responsive style to make Old Reddit slightly more friendly on a mobile or other small display.</p><p>Several on-screen elements, including the sidebar, are sacrificed to focus on the content itself.</p><p>Attempts to play well with other styles.</p>`
+@version        20231014.1
+@license        CC-BY-4.0
+@preprocessor   uso
+==/UserStyle== */
+@namespace "http://www.w3.org/1999/xhtml";
+@-moz-document domain("old.reddit.com") {
+
+    @media screen and (max-width: 800px) {
+        div.mobile-web-redirect-bar {
+            display: none;
+        }
+
+        div.top-matter p.title a.title {
+            font-size: 1.5em;
+        }
+
+        body.with-listing-chooser.listing-chooser-collapsed > .content {
+            margin-left: 0;
+        }
+
+        body > div.side,
+        body > div.listing-chooser,
+        div.sr-list,
+        #sr-more-link,
+        .link .rank,
+        div.top-matter span.linkflairlabel {
+            display: none;
+        }
+
+        #header-bottom-right {
+            bottom: inherit;
+            top: 0px;
+        }
+
+        .drop-choices.inuse {
+            font-size: 2em;
+        }
+
+        #sr-header-area {
+            height: 22px;
+        }
+
+        #sr-header-area .dropdown.srdrop {
+            font-size: 2em;
+        }
+
+        span.pagename.redditname {
+            font-size: 2.5em;
+            font-weight: bold !important;
+        }
+
+        .flat-list {
+            font-size: 1.5em;
+        }
+
+        .usertext,
+        .usertext-body {
+            font-size: 1.3em;
+        }
+
+        div.linklisting .link {
+            padding: 10px 0;
+        }
+
+        .comment {
+            margin-bottom: 20px !important;
+        }
+
+        div.even {
+            background-color: rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .comment div.child {
+            background-color: rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+}
